@@ -8,7 +8,7 @@
 This is a new project aimed at developing a suite of command line
 tools and a common file format for hypertext interactive fiction.
 
-The best way to get started with dendry is to read [smhwr's guide](https://smwhr.notion.site/Getting-started-with-Dendry-188e7e39a961497fb2d0a0deee0c21a0).
+**The best way to get started with dendry is to read [smhwr's guide](https://smwhr.notion.site/Getting-started-with-Dendry-188e7e39a961497fb2d0a0deee0c21a0).**
 
 To install:
 
@@ -139,10 +139,10 @@ In the browser, the state is stored as `dendryUI.dendryEngine.state`. Qualities 
 
 Given the current sparsity of the documentation, a good way to learn dendry is to read through the source code of existing games.
 
-[Bee by Emily Short](https;//github.com/aucchen/bee)
+[Bee by Emily Short](https://github.com/aucchen/bee)
 
-[Pageant by Autumn Chen](https;//github.com/aucchen/pageant)
+[Pageant by Autumn Chen](https://github.com/aucchen/pageant)
 
-[New Year's Eve, 2019 by Autumn Chen](https;//github.com/aucchen/new-years-eve-2019)
+[New Year's Eve, 2019 by Autumn Chen](https://github.com/aucchen/new-years-eve-2019)
 
 For a list of currently known dendry projects, see [IFDB](https://ifdb.org/search?searchfor=system:dendry).
