@@ -241,6 +241,23 @@
           done();
         });
       });
+
+      it('should allow string equality comparisons', function(done) {
+        logic.compilePredicate(
+          'foo = "abc" and bar = ""',
+          function(err, fn) {
+            noerr(err);
+            var state = {
+              qualities: {
+                foo: "abc",
+                bar: "",
+              }
+            };
+            engine.runPredicate(fn, false, {}, state).should.be.true;
+            done();
+          });
+      });
+
     });
 
     // ----------------------------------------------------------------------
@@ -362,6 +379,19 @@
             fn.root.should.equal('actions');
             done();
           });
+      });
+
+    it('should allow the creation of string variables', function(done) {
+        logic.compileActions('bar = "abc"; foo = ""', function(err, fn) {
+          noerr(err);
+          var state = {
+            qualities: {}
+          };
+          engine.runActions([fn], {}, state);
+          state.qualities.bar.should.equal("abc");
+          state.qualities.foo.should.equal("");
+          done();
+        });
       });
 
       it('should default to 0 on unknown quality modification', function(done) {
