@@ -258,6 +258,39 @@
           });
       });
 
+      it('should work with single-quoted strings', function(done) {
+        logic.compilePredicate(
+          "foo = 'abc' and bar = ' '",
+          function(err, fn) {
+            noerr(err);
+            var state = {
+              qualities: {
+                foo: "abc",
+                bar: " ",
+              }
+            };
+            engine.runPredicate(fn, false, {}, state).should.be.true;
+            done();
+          });
+      });
+
+      it('should work with single and double equals signs', function(done) {
+        logic.compilePredicate(
+          "foo == 'abc' and bar == ' ' and x == 2",
+          function(err, fn) {
+            noerr(err);
+            var state = {
+              qualities: {
+                foo: "abc",
+                bar: " ",
+                x: 2,
+              }
+            };
+            engine.runPredicate(fn, false, {}, state).should.be.true;
+            done();
+          });
+      });
+
     });
 
     // ----------------------------------------------------------------------
