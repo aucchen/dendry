@@ -43,6 +43,11 @@ syn match command '^signal:'
 syn match command '^set-bg:'
 syn match command '^set-jump:'
 syn match command '^game-over:'
+syn match command '^is-card:'
+syn match command '^is-hand:'
+syn match command '^audio:'
+syn match command '^go-to-ref:'
+syn match command '^card-image:'
 
 
 syn match comment '^#.*$'
