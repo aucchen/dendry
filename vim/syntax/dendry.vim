@@ -55,7 +55,7 @@ syn match comment '^#.*$'
 syn match var_name contained '\w*'
 syn match var_replace '\[+\s*\w*\s*+\]' contains=var_name
 
-syn region conditional matchgroup=brackets start='\[?' end='?\]' contains=colon,if_statement,plaintext
+syn region conditional matchgroup=brackets start='\[?' end='?\]' contains=if_statement,colon,plaintext
 
 syn include @js syntax/javascript.vim
 syn include @html syntax/html.vim

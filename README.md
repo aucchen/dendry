@@ -135,6 +135,14 @@ Including javascript in `view-if`: `{! return ((Q['a'] || 0)===(Q['b'] || 0)); !
 In the browser, the state is stored as `dendryUI.dendryEngine.state`. Qualities are at `dendryUI.dendryEngine.state.qualities`. You can use these variables in the browser console to inspect or alter the current state of the game.
 
 
+## Random testing in dendry
+
+To run random tests in dendry, run `dendry random-test -nruns <number of runs> -d game_data --choices_dump choices --scenes_dump scenes`
+
+To see all the command-line options, run `dendry random-test -h`
+
+
+
 ## Example projects with source code
 
 Given the current sparsity of the documentation, a good way to learn dendry is to read through the source code of existing games.
