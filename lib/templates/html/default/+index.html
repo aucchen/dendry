@@ -26,7 +26,7 @@
         <!--<a id="stats-link" onclick="window.showStats();" href="#">Status</a>-->
         <a onclick="dendryUI.showSaveSlots();" href="#">Save/Load</a>
         <a onclick="dendryUI.showOptions();" href="#">Options</a>
-        <a onclick="window.saveTranscript();" href="#">Save Transcript</a>
+        <a onclick="window.saveTranscript();" href="#" class="save-transcript">Save Transcript</a>
       </div>
 
     </header>
@@ -34,6 +34,14 @@
     <div id="options" class="overlay" style="display: none;">
         <div class="overlay_top">
             <table>
+                <tr>
+                    <td>
+                        <label for="transcript_checkbox">Enable transcript</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="transcript_checkbox" name="transcript" value="1" onclick="window.enableTranscript();">
+                    </td>
+                </tr>
                 <tr>
                     <td>
                         <label for="backgrounds_yes">Enable backgrounds</label>
@@ -225,7 +233,7 @@
         <a onclick="window.showSaveSlots();" href="#">Save/Load</a>
         <a onclick="window.quickSave();" href="#">Quick Save</a>
         <a onclick="window.quickLoad();" href="#">Quick Load</a>
-        <a onclick="window.saveTranscript();" href="#">Save Transcript</a>
+        <a onclick="window.saveTranscript();" href="#" class="save-transcript">Save Transcript</a>
       </p>
 
       &copy; 2021 Autumn Chen.
