@@ -32,18 +32,21 @@
 
     <div id="options" class="overlay options" style="display: none;">
         <div class="overlay_top">
+        <!-- TODO: enable/disable animations as you wish -->
             <table>
+                
                 <tr>
                     <td>
-                        <label for="backgrounds_yes">Enable backgrounds</label>
+                        Backgrounds:
+                    </td>
+                    <td>
+                        <label for="backgrounds_yes">On</label>
                     </td>
                     <td>
                         <input type="radio" id="backgrounds_yes" name="backgrounds" value="1" onclick="window.enableBg();">
                     </td>
-                </tr>
-                <tr>
                     <td>
-                        <label for="backgrounds_no">Disable backgrounds</label>
+                        <label for="backgrounds_no">Off</label>
                     </td>
                     <td>
                         <input type="radio" id="backgrounds_no" name="backgrounds" value="0" onclick="window.disableBg();">
@@ -52,17 +55,64 @@
                 <tr>
                     <td> <hr> </td>
                 </tr>
+                
+
+                <!--
                 <tr>
                     <td>
-                        <label for="animate_yes">Enable animation</label>
+                        Images:
+                    <td>
+                        <label for="images_yes">On</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="images_yes" name="images" value="1" onclick="window.enableImages();">
+                    </td>
+                    <td>
+                        <label for="images_no">Off</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="images_no" name="images" value="0" onclick="window.disableImages();">
+                    </td>
+                </tr>
+                <tr>
+                    <td> <hr> </td>
+                </tr>
+                -->
+                
+                <tr>
+                    <td>
+                        Background animations:
+                    </td>
+                    <td>
+                        <label for="animate_bg_yes">On</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="animate_bg_yes" name="animate_bg" value="1" onclick="window.enableAnimateBg();">
+                    </td>
+                    <td>
+                        <label for="animate_bg_no">Off</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="animate_bg_no" name="animate_bg" value="0" onclick="window.disableAnimateBg();">
+                    </td>
+                </tr>
+                <tr>
+                    <td> <hr> </td>
+                </tr>
+                
+                
+                <tr>
+                    <td>
+                        Animations:
+                    </td>
+                    <td>
+                        <label for="animate_yes">On</label>
                     </td>
                     <td>
                         <input type="radio" id="animate_yes" name="animate" value="1" onclick="window.enableAnimate();">
                     </td>
-                </tr>
-                <tr>
                     <td>
-                        <label for="animate_no">Disable animation</label>
+                        <label for="animate_no">Off</label>
                     </td>
                     <td>
                         <input type="radio" id="animate_no" name="animate" value="0" onclick="window.disableAnimate();">
@@ -71,20 +121,44 @@
                 <tr>
                     <td> <hr> </td>
                 </tr>
+                <!-- Uncomment for audio options
                 <tr>
                     <td>
-                        <label for="animate_bg_yes">Enable background animation</label>
+                        Audio:
                     </td>
                     <td>
-                        <input type="radio" id="animate_bg_yes" name="animate_bg" value="1" onclick="window.enableAnimateBg();">
+                        <label for="audio_yes">On</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="audio_yes" name="audio" value="1" onclick="window.enableAudio();">
+                    </td>
+                    <td>
+                        <label for="audio_no">Off</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="audio_no" name="audio" value="0" onclick="window.disableAudio();">
                     </td>
                 </tr>
+
+                <tr>
+                    <td> <hr> </td>
+                </tr>
+                -->
                 <tr>
                     <td>
-                        <label for="animate_bg_no">Disable background animation</label>
+                        Color scheme:
                     </td>
                     <td>
-                        <input type="radio" id="animate_bg_no" name="animate_bg" value="0" onclick="window.disableAnimateBg();">
+                        <label for="light_mode">Light mode</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="light_mode" name="ld_mode" value="1" onclick="window.enableLightMode();">
+                    </td>
+                    <td>
+                        <label for="dark_mode">Dark mode</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="dark_mode" name="ld_mode" value="0" onclick="window.enableDarkMode();">
                     </td>
                 </tr>
                 <tr>
@@ -107,6 +181,9 @@
                     <button class="b delete_button" id="delete_button_a0">Delete</button>
                 </td>
                 <td class="save_info" id="save_info_a0"></td>
+                <td>
+                    <button class="b export_button" id="export_button_a0">Export</button>
+                </td>
             </tr>
             <tr>
                 <td>Auto-1</td>
@@ -117,6 +194,9 @@
                     <button class="b delete_button" id="delete_button_a1">Delete</button>
                 </td>
                 <td class="save_info" id="save_info_a1"></td>
+                <td>
+                    <button class="b export_button" id="export_button_a1">Export</button>
+                </td>
             </tr>
             
             <tr>
@@ -128,6 +208,9 @@
                     <button class="b delete_button" id="delete_button_0">Delete</button>
                 </td>
                 <td class="save_info" id="save_info_0"></td>
+                <td>
+                    <button class="b export_button" id="export_button_0">Export</button>
+                </td>
             </tr>
             <tr>
                 <td>1</td>
@@ -138,6 +221,9 @@
                     <button class="b delete_button" id="delete_button_1">Delete</button>
                 </td>
                 <td class="save_info" id="save_info_1"></td>
+                <td>
+                    <button class="b export_button" id="export_button_1">Export</button>
+                </td>
             </tr>
             <tr>
                 <td>2</td>
@@ -148,6 +234,9 @@
                     <button class="b delete_button" id="delete_button_2">Delete</button>
                 </td>
                 <td class="save_info" id="save_info_2"></td>
+                <td>
+                    <button class="b export_button" id="export_button_2">Export</button>
+                </td>
             </tr>
             <tr>
                 <td>3</td>
@@ -158,6 +247,9 @@
                     <button class="b delete_button" id="delete_button_3">Delete</button>
                 </td>
                 <td class="save_info" id="save_info_3"></td>
+                <td>
+                    <button class="b export_button" id="export_button_3">Export</button>
+                </td>
             </tr>
             <tr>
                 <td>4</td>
@@ -168,6 +260,9 @@
                     <button class="b delete_button" id="delete_button_4">Delete</button>
                 </td>
                 <td class="save_info" id="save_info_4"></td>
+                <td>
+                    <button class="b export_button" id="export_button_4">Export</button>
+                </td>
             </tr>
             <tr>
                 <td>5</td>
@@ -178,6 +273,9 @@
                     <button class="b delete_button" id="delete_button_5">Delete</button>
                 </td>
                 <td class="save_info" id="save_info_5"></td>
+                <td>
+                    <button class="b export_button" id="export_button_5">Export</button>
+                </td>
             </tr>
             <tr>
                 <td>6</td>
@@ -188,6 +286,9 @@
                     <button class="b delete_button" id="delete_button_6">Delete</button>
                 </td>
                 <td class="save_info" id="save_info_6"></td>
+                <td>
+                    <button class="b export_button" id="export_button_6">Export</button>
+                </td>
             </tr>
             <tr>
                 <td>7</td>
@@ -198,6 +299,14 @@
                     <button class="b delete_button" id="delete_button_7">Delete</button>
                 </td>
                 <td class="save_info" id="save_info_7"></td>
+                <td>
+                    <button class="b export_button" id="export_button_7">Export</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <label for="import_save">Import save file:</label> <input type="file" id="import_save" onchange="dendryUI.importSave('import_save');"></input>
+                </td>
             </tr>
             <tr>
                 <td>

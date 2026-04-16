@@ -1,12 +1,48 @@
 body {
+  --bg-color: #f3f3e3;
+  --border-color: #000;
+  --content-bg-color: #f3f3f3;
+  --text-color: #431;
+  --link-color: #900;
+  --link-hover-color: rgba(0, 0, 0, 0.05);
+  --unavailable-bg-color: rgba(0, 0, 0, 0.1);
+  --unavailable-color: #999;
+  --tab-bg-color: #dedede;
+  --tab-color: #ddd;
+  --tab-hover-color: #ececec;
+  --card-border-color: #ccc;
+  --card-bg-color: #ddd;
   font-family: "Minion Pro", Georgia, serif;
   /*font-size: 1.125em;*/
-  background-color: #f3f3e3;
+  background-color: var(--bg-color);
   padding: 0;
   line-height: 155%;
 }
+body.dark-mode {
+  --bg-color: #000;
+  --border-color: #fff;
+  --content-bg-color: #242424;
+  --text-color: #efefef;
+  --link-color: #ff8080;
+  --link-hover-color: rgba(100, 100, 100, 0.1);
+  --tab-bg-color: #555555;
+  --tab-color: #505050;
+  --tab-hover-color: #242424;
+  --card-border-color: #4c4c4c;
+  --card-bg-color: #3f3f3f;
+}
+body.dark-mode #content {
+  border-style: double;
+  border-width: 4px;
+  border-color: #888;
+}
+body.dark-mode .tools {
+  border-style: double;
+  border-width: 4px;
+  border-color: #888;
+}
 header, #content, footer {
-  color: #431;
+  color: var(--text-color);
   max-width: 540px;
   margin: 0 auto;
 }
@@ -42,14 +78,14 @@ header h2:before {
 }
 #content {
   position: relative;
-  background-color: #f3f3f3;
+  background-color: var(--content-bg-color);
   font-size: 1.1em;
   padding: 1em 1.5em 1.5em 1.5em;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
 #content #read-marker {
   border: none;
-  border-top: 1px solid #000;
+  border-top: 1px solid var(--border-color);
   height: 1px;
   width: 20%;
   position: center;
@@ -67,8 +103,11 @@ header h2:before {
   text-shadow: rgba(255, 255, 255, 0.75) 2px 2px 2px,
                rgba(0, 0, 0, 0.1) -1px -1px 2px;
 }
+table {
+    border-spacing: 0.5em;
+}
 a {
-  color: #900;
+  color: var(--link-color);
   text-decoration: none;
 }
 p {
@@ -114,12 +153,12 @@ ul.choices li div.subtitle {
   font-style: italic;
 }
 ul.choices li.unavailable {
-  color: #999;
-  background-color: rgba(0, 0, 0, 0.1) !important;
+  color: var(--unavailable-color);
+  background-color: var(--unavailable-bg-color) !important;
   cursor: default !important;
 }
 ul.choices li:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--link-hover-color);
   cursor: pointer;
 }
 ul.choices li:last-child {
@@ -172,7 +211,7 @@ blockquote + blockquote.attribution {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #f3f3e3;
+    background-color: var(--bg-color);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
